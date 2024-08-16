@@ -20,10 +20,13 @@ function Game() {
   const [gameState, setGameState] = React.useState();
 
   function checkAnswer(guess) {
-    setPreviousGuesses([...previousGuesses, guess]);
+
+    const newGuessList = [...previousGuesses, guess];
+
+    setPreviousGuesses(newGuessList);
 
     // Max guesses?
-    previousGuesses.length == CONSTANTS.NUM_OF_GUESSES_ALLOWED ? setGameState("sad") : null
+    newGuessList.length == CONSTANTS.NUM_OF_GUESSES_ALLOWED ? setGameState("sad") : null
 
     // Win?
     guess === answer ? setGameState("happy") : null
