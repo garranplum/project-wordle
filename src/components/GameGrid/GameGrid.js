@@ -13,6 +13,7 @@ function GameGrid({ previousGuesses, answer }) {
           })}
       </p>
     })}
+    {Array(6 - previousGuesses.length).fill().map(() => <p className="guess" key={crypto.randomUUID()}>{Array(5).fill().map(() => <span key={crypto.randomUUID()} className="cell"></span>)}</p>)}
   </div>;
 }
 
