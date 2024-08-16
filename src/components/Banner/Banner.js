@@ -6,7 +6,7 @@ function Banner({ gameState, guesses, answer }) {
 
   const banners = {
     happy: <p>
-      <strong>Congratulations!</strong> Got it in {" "} <strong>{guesses} guesses</strong>.
+      <strong>Congratulations!</strong> Got it in {" "} <strong>{guesses} guess{guesses > 1 ? "es" : null}</strong>.
     </p>,
     sad: <p>Sorry, the correct answer is <strong>{answer}</strong>.</p>
   }
