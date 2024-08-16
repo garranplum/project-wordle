@@ -23,12 +23,11 @@ function Game() {
     setPreviousGuesses([...previousGuesses, guess]);
 
     // Max guesses?
-    previousGuesses.length == CONSTANTS.NUM_OF_GUESSES_ALLOWED ? setGameState("sad") :
+    previousGuesses.length == CONSTANTS.NUM_OF_GUESSES_ALLOWED ? setGameState("sad") : null
 
-      // Win?
-      guess === answer ? setGameState("happy") : null
+    // Win?
+    guess === answer ? setGameState("happy") : null
 
-    null
 
   }
 
